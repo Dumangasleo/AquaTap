@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+@import 'uniwind';
+
+/*
+ * AquaTap design tokens ("Soft Aqua" theme).
+ * Every Tailwind class in the app (bg-brand, text-ink-muted, rounded-card, font-heading...) comes from here.
+ * Keep the colors in sync with src/theme/tokens.ts, which is used where a class cannot be used
+ * (icon colors, SVG shapes, the map).
+ *
+ * Soft Aqua = clear sky blue + water cyan on a very light blue page, rounded friendly type.
+ * Every text color below passes 4.5:1 contrast on its background (white text on bg-brand = 5.9:1).
+ */
+@theme {
+  /* Brand: sky blue + water cyan accent */
+  --color-brand: #0369a1;
+  --color-brand-pressed: #075985;
+  --color-brand-deep: #0c4a6e;
+  --color-brand-soft: #e0f2fe;
+  --color-brand-line: #bae6fd;
+  --color-aqua: #0e7490;
+  --color-aqua-bright: #06b6d4;
+  --color-aqua-soft: #cffafe;
+
+  /* Surfaces */
+  --color-canvas: #f0f9ff;
+  --color-surface: #ffffff;
+  --color-surface-muted: #e9f5fb;
+  --color-line: #e0f0f8;
+  --color-line-strong: #bcdceb;
+
+  /* Text */
+  --color-ink: #0f172a;
+  --color-ink-muted: #475569;
+  --color-ink-subtle: #5b6b80;
+  --color-on-brand: #ffffff;
+
+  /* Status */
+  --color-success: #0b7a55;
+  --color-success-strong: #0a6647;
+  --color-success-soft: #dcf7ea;
+  --color-warning: #a15c07;
+  --color-warning-soft: #fef3c7;
+  --color-danger: #d92d20;
+  --color-danger-pressed: #b42318;
+  --color-danger-soft: #fee4e2;
+  --color-info: #0e7490;
+  --color-info-soft: #cffafe;
+  --color-neutral-soft: #eef4f8;
+  --color-overlay: rgba(15, 23, 42, 0.5);
+
+  /*
+   * Fonts (loaded in src/app/_layout.tsx). One family name per weight for Android.
+   * Nunito Sans for reading text and labels; Varela Round (one weight) for titles and big numbers.
+   */
+  --font-body: 'NunitoSans_400Regular';
+  --font-body-medium: 'NunitoSans_500Medium';
+  --font-body-strong: 'NunitoSans_600SemiBold';
+  --font-heading: 'NunitoSans_700Bold';
+  --font-display: 'VarelaRound_400Regular';
+
+  /* Shapes */
+  --radius-field: 16px;
+  --radius-card: 24px;
+  --radius-sheet: 32px;
+}
